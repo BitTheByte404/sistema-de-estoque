@@ -1,4 +1,4 @@
-class estoqueProdutos {}
+const meuEstoque = new Estoque();
 let opcao = "";
 
 while (opcao !== "4") {
@@ -13,34 +13,38 @@ while (opcao !== "4") {
     "4 Sair do sistema\n\n" +
     "Digite o número da opção desejada:"
   );
-
-
-  let (opcao) 
+ 
   {
-     if (opcao = 1){
-      alert("Você escolheu: Adicionar item");
-        let nome_item = "";  
-        let qnt_item = 0 ;
-        let data_reestoque = ""; 
-         z
-     }
+     if (opcao === "1"){
+      console.log("Você escolheu: Adicionar item");
+        let nome = "";  
+        let quantidade = 0 ;
+        let dataReestoque = ""; 
+        console.log ("adicionar item em qual categoria? \n 1 - cafés \n 2 - insumos alimenticios \n 3 - material limpeza/manutenção")
+        let novoProduto = new Produto(nome, quantidade, categoria, dataReestoque);
+    meuEstoque.adicionarProduto(novoProduto);
+    alert("Produto adicionado com sucesso!");
+      }
     
-     ifelse (opcao = 2) 
+     else if (opcao === "2") 
      {
-        alert("Você escolheu: Remover ou Modificar estoque");
+      console.log("Você escolheu: Remover ou Modificar estoque");
     
      } 
      
-    ifelse (opcão = 3)
+     else if (opcao === "3")
     {
-        alert("Você escolheu: Conferir estoque");
+      console.log("Você escolheu: Conferir estoque");
     }
 
-   ifelse(opcao = 4)
+     else if (opcao === "4")
     {
-      alert("Saindo do sistema... Até logo!");
+      console.log("Saindo do sistema... Até logo!");
       break
 }
-
+    else{
+      console.log("Numero invalido")
+      break
+    }
   }
 }
